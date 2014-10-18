@@ -24,6 +24,20 @@ LOCAL_PATH := device/samsung/gardalte
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+else
+	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
+
+# kernel modules
+PRODUCT_COPY_FILES += $(foreach module,\
+	$(wildcard $(LOCAL_PATH)/modules/*.ko),\
+	$(module):system/lib/modules/$(notdir $(module)))
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
