@@ -51,11 +51,6 @@ on init
     chown system system /proc/avc_msg
     chmod 0660 /proc/avc_msg
 
-    # Vibetonz
-    export VIBE_PIPE_PATH /dev/pipes
-    mkdir /dev/pipes 0771 vibe vibe
-    restorecon /dev/pipes
-
 on post-fs-data
     mkdir /data/media 0770 media_rw media_rw
 
@@ -153,10 +148,6 @@ on boot
     # CPU Idle
     chown system radio /sys/module/cpuidle/parameters/enable_mask
     chown system radio /sys/module/exynos3470_cpuidle/parameters/enable_mask
-
-    # Vibetonz
-    chmod 0660 /dev/tspdrv
-    chown vibe vibe /dev/tspdrv
 
     # For BT MAC address
     mkdir /efs/bluetooth 0775 radio system
