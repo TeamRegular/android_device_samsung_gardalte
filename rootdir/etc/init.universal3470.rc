@@ -407,6 +407,14 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     disabled
     oneshot
 
+# TVout
+service TvoutService_C /system/bin/bintvoutservice
+     class main
+     user system
+     group graphics
+on property:ro.tvout.enable=false
+    stop TvoutService_C
+
 # GPS
 service gpsd /system/bin/gpsd -c /system/etc/gps.xml
     class main

@@ -41,10 +41,9 @@ TARGET_CPU_VARIANT := cortex-a7
 # Kernel
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_PREBUILT_KERNEL := device/samsung/gardalte/kernel
-#TARGET_KERNEL_CONFIG := cyanogenmod_gardalte_defconfig
-#TARGET_KERNEL_SOURCE := kernel/samsung/gardalte
-#ARM_EABI_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6/bin
+TARGET_KERNEL_CONFIG := cyanogenmod_gardalte_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/exynos3470
+ARM_EABI_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6/bin
 
 # Audio
 BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true

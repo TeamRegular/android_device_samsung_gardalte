@@ -13,6 +13,7 @@ app/mcRegistry/ffffffff00000000000000000000000e.tlbin
 app/mcRegistry/ffffffff000000000000000000000018.tlbin
 app/mcRegistry/ffffffffd00000000000000000000004.tlbin
 app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
+bin/bintvoutservice
 bin/cbd
 bin/gps.cer
 bin/gpsd
@@ -60,6 +61,7 @@ lib/libdisplaymodule.so
 lib/libdisplay.so
 lib/libdrmdecrypt.so
 lib/libexynosfimc.so
+lib/libExynosHWCService.so
 lib/libExynosIPService.so
 lib/libExynosOMX263d.so
 lib/libExynosOMX264d.so
