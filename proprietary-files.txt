@@ -13,6 +13,7 @@ app/mcRegistry/ffffffff00000000000000000000000e.tlbin
 app/mcRegistry/ffffffff000000000000000000000018.tlbin
 app/mcRegistry/ffffffffd00000000000000000000004.tlbin
 app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
+bin/at_distributor
 bin/bintvoutservice
 bin/cbd
 bin/gps.cer
@@ -21,8 +22,7 @@ bin/IPSecService
 bin/lpm
 bin/mcDriverDaemon
 bin/rild
-cameradata/datapattern_420sp.yuv
-cameradata/datapattern_front_420sp.yuv
+csc/sales_code.dat
 etc/ExynosOMXReg.conf
 etc/mdppwlist
 etc/PDC.ini
@@ -46,11 +46,7 @@ lib/hw/gralloc.exynos3.so
 lib/hw/nfc.universal3470.so
 lib/hw/sensors.universal3470.so
 lib/libakm.so
-lib/libarcsoft_flawlessface.so
-lib/libarcsoft_night_shot.so
-lib/libarcsoft_panorama_burstcapture.so
-lib/libarcsoft_sensorndk.so
-lib/libarcsoft_skin_soften.so
+lib/libatparser.so
 lib/libaudiopolicy_sec.so
 lib/libaudio-ril.so
 lib/libaudiosa.so
@@ -74,6 +70,8 @@ lib/libExynosOMXVc1d.so
 lib/libexynosutils.so
 lib/libexynosv4l2.so
 lib/libExynosVideoApi.so
+lib/libfactoryutil.so
+lib/libfimg.so
 lib/libgdmcprov.so
 lib/libhdcp2.so
 lib/libhdmimodule.so
@@ -88,6 +86,7 @@ lib/libMcClient.so
 lib/libMcRegistry.so
 lib/libmpp.so
 lib/libmysound.so
+lib/libomission_avoidance.so
 lib/libQmageDecoder.so
 lib/libril.so
 lib/lib_SA_GoogleFX_ver119k.so
@@ -106,6 +105,7 @@ lib/libsetproperty.so
 lib/libstagefright_hdcp.so
 lib/libstagefrighthw.so
 lib/libtinyalsa.so
+lib/libvirtualdisplaymodule.so
 lib/libvirtualdisplay.so
 lib/libwrappergps.so
 lib/libwvm.so
