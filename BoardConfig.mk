@@ -20,7 +20,7 @@ BOARD_VENDOR := samsung
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/gardalte/include
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := gardalte,gardaltetmo,gardalteMetroPCS
+TARGET_OTA_ASSERT_DEVICE := gardalte
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := universal3470
