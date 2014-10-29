@@ -17,10 +17,7 @@
 BOARD_VENDOR := samsung
 
 # Include path
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/gardalte/include
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := gardalte
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/gardalte-common/include
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := universal3470
@@ -52,10 +49,10 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 5679087616
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Recovery
-BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/gardalte/recovery/graphics.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/gardalte-common/recovery/graphics.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := device/samsung/gardalte/rootdir/etc/fstab.universal3470
+TARGET_RECOVERY_FSTAB := device/samsung/gardalte-common/rootdir/etc/fstab.universal3470
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_RECOVERY_SWIPE := true
 
@@ -65,8 +62,8 @@ BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/gardalte/bluetooth/libbt_vndcfg.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/gardalte/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/gardalte-common/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/gardalte-common/bluetooth
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
@@ -75,7 +72,7 @@ COMMON_GLOBAL_CFLAGS += -DSAMSUNG_DVFS
 
 # Graphics
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/samsung/gardalte/egl/egl.cfg
+BOARD_EGL_CFG := device/samsung/gardalte-common/egl/egl.cfg
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 BOARD_USE_BGRA_8888 := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 5
@@ -100,17 +97,12 @@ ENABLE_WEBGL := true
 
 # SELinux
 #BOARD_SEPOLICY_DIRS += \
-#    device/samsung/gardalte/sepolicy
+#    device/samsung/gardalte-common/sepolicy
 
 #BOARD_SEPOLICY_UNION := \
 
 # Charging mode
 BOARD_BATTERY_DEVICE_NAME := battery
-
-# Vendor Init
-#TARGET_UNIFIED_DEVICE := true
-#TARGET_INIT_VENDOR_LIB := libinit_gardalte
-#TARGET_LIBINIT_DEFINES_FILE := device/samsung/gardalte/init/init_gardalte.c
 
 # CMHW
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw

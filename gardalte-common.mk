@@ -17,9 +17,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/gardalte/gardalte-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/gardalte-common/gardalte-common-vendor.mk)
 
-LOCAL_PATH := device/samsung/gardalte
+LOCAL_PATH := device/samsung/gardalte-common
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
