@@ -22,3 +22,4 @@ PRODUCT_NAME := full_gardalte
 PRODUCT_DEVICE := gardalte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
+PRODUCT_MODEL := SGH-T399

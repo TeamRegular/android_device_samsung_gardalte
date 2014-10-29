@@ -19,7 +19,7 @@
 
 // Commented out for variant support 
 // when null the product model is used
-//#define BTM_DEF_LOCAL_NAME   "SGH-T399"
+#define BTM_DEF_LOCAL_NAME   "SGH-T399"
 
 // Networking, Capturing, Object Transfer
 // MAJOR CLASS: COMPUTER

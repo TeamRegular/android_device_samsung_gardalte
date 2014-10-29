@@ -108,9 +108,9 @@ ENABLE_WEBGL := true
 BOARD_BATTERY_DEVICE_NAME := battery
 
 # Vendor Init
-TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_gardalte
-TARGET_LIBINIT_DEFINES_FILE := device/samsung/gardalte/init/init_gardalte.c
+#TARGET_UNIFIED_DEVICE := true
+#TARGET_INIT_VENDOR_LIB := libinit_gardalte
+#TARGET_LIBINIT_DEFINES_FILE := device/samsung/gardalte/init/init_gardalte.c
 
 # CMHW
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
