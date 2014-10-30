@@ -40,6 +40,10 @@ PRODUCT_PACKAGES += \
     lpm.rc \
     ueventd.universal3470.rc
 
+# TWRP
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
