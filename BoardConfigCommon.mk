@@ -105,8 +105,6 @@ BOARD_BATTERY_DEVICE_NAME := battery
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 
 # TWRP
-ifneq ($(wildcard bootable/recovery-twrp/Android.mk),)
-RECOVERY_VARIANT := twrp
 DEVICE_RESOLUTION := 480x800
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
@@ -118,6 +116,3 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_MTP_DEVICE := "/dev/usb_mtp_gadget"
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
-else
-RECOVERY_VARIANT := cm
-endif
