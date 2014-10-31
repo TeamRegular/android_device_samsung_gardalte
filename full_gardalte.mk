@@ -1,4 +1,3 @@
-#
 # Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,10 +11,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-LOCAL_PATH := $(call my-dir)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# Inherit from gardalte device
+$(call inherit-product, device/samsung/gardalte/device.mk)
 
-ifneq ($(filter gardalte,$(TARGET_DEVICE)),)
-include $(call all-subdir-under,$(LOCAL_PATH))
-endif
+# Set those variables here to overwrite the inherited values.
+PRODUCT_NAME := full_gardalte
+PRODUCT_DEVICE := gardalte
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung

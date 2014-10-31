@@ -17,7 +17,7 @@
 BOARD_VENDOR := samsung
 
 # Include path
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/gardalte-common/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/gardalte/include
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := universal3470
@@ -51,10 +51,9 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # Recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := device/samsung/gardalte-common/rootdir/etc/fstab.universal3470
+TARGET_RECOVERY_FSTAB := device/samsung/gardalte/rootdir/etc/fstab.universal3470
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_RECOVERY_SWIPE := true
 
 # Audio
 BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
@@ -62,8 +61,8 @@ BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/gardalte-common/bluetooth/libbt_vndcfg.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/gardalte-common/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/gardalte/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/gardalte/bluetooth
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
@@ -72,7 +71,7 @@ COMMON_GLOBAL_CFLAGS += -DSAMSUNG_DVFS
 
 # Graphics
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/samsung/gardalte-common/egl/egl.cfg
+BOARD_EGL_CFG := device/samsung/gardalte/egl/egl.cfg
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 BOARD_USE_BGRA_8888 := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 5
@@ -97,12 +96,30 @@ ENABLE_WEBGL := true
 
 # SELinux
 #BOARD_SEPOLICY_DIRS += \
-#    device/samsung/gardalte-common/sepolicy
+#    device/samsung/gardalte/sepolicy
 
 #BOARD_SEPOLICY_UNION := \
 
 # Charging mode
 BOARD_BATTERY_DEVICE_NAME := battery
 
+# Vendor Init
+TARGET_UNIFIED_DEVICE := true
+TARGET_INIT_VENDOR_LIB := libinit_gardalte
+TARGET_LIBINIT_DEFINES_FILE := device/samsung/gardalte/init/init_gardalte.c
+
 # CMHW
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
+
+# TWRP
+DEVICE_RESOLUTION := 480x800
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_INTERNAL_STORAGE_PATH := "/data/media/0"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_MTP_DEVICE := "/dev/usb_mtp_gadget"
+TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
