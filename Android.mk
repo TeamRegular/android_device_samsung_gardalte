@@ -16,6 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter gardalte,$(TARGET_DEVICE)),)
-include $(call all-subdir-under,$(LOCAL_PATH))
+ifeq ($(TARGET_DEVICE),gardalte)
+include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
