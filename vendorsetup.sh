@@ -1,1 +1,1 @@
-add_lunch_combo cm_gardalte-userdebug
+add_lunch_combo omni_gardalte-userdebug
