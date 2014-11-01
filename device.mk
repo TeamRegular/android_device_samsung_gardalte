@@ -59,7 +59,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.universal3740
+    camera.universal3470
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
