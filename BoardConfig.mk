@@ -100,19 +100,11 @@ WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/wifi/bcmdhd_p2p.bin"
 # Webkit
 ENABLE_WEBGL := true
 
-# SELinux
-#BOARD_SEPOLICY_DIRS += \
-#    device/samsung/gardalte/sepolicy
-
-#BOARD_SEPOLICY_UNION := \
+# PowerHAL
+TARGET_POWERHAL_VARIANT := universal3470
 
 # Charging mode
 BOARD_BATTERY_DEVICE_NAME := battery
-
-# Vendor Init
-TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_gardalte
-TARGET_LIBINIT_DEFINES_FILE := device/samsung/gardalte/init/init_gardalte.c
 
 # CMHW
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
@@ -129,3 +121,14 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_MTP_DEVICE := "/dev/usb_mtp_gadget"
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
+
+# Vendor Init
+TARGET_UNIFIED_DEVICE := true
+TARGET_INIT_VENDOR_LIB := libinit_gardalte
+TARGET_LIBINIT_DEFINES_FILE := device/samsung/gardalte/init/init_gardalte.c
+
+# SELinux
+#BOARD_SEPOLICY_DIRS += \
+#    device/samsung/gardalte/sepolicy
+
+#BOARD_SEPOLICY_UNION := \

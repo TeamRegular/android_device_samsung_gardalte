@@ -155,7 +155,6 @@ vendor/lib/hw/camera.vendor.universal3470.so
 vendor/lib/hw/hwcomposer.exynos3.so
 vendor/lib/hw/keystore.exynos3.so
 vendor/lib/hw/lights.exynos3.so
-vendor/lib/hw/power.exynos3.so
 vendor/lib/liblvverx_3.21.15.so
 vendor/lib/liblvvetx_3.21.15.so
 vendor/lib/liblvvetx.so
