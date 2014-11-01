@@ -54,6 +54,7 @@ lib/libcsc.so
 lib/libcurl.so
 lib/libdisplaymodule.so
 lib/libdisplay.so
+lib/lib_DNSe_NRSS_ver226.so
 lib/libdrmdecrypt.so
 lib/libexynosfimc.so
 lib/libExynosHWCService.so
