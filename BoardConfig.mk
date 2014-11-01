@@ -58,6 +58,9 @@ TARGET_RECOVERY_FSTAB := device/samsung/gardalte/rootdir/etc/fstab.universal3470
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 
+# Disable initlogo
+TARGET_NO_INITLOGO := true
+
 # Audio
 BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
 
